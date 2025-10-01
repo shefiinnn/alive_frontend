@@ -1,4 +1,3 @@
-import React from 'react';
 import { Linkedin, Facebook, Twitter } from 'lucide-react';
 
 export function Footer() {
