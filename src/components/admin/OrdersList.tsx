@@ -38,7 +38,7 @@ const OrdersPage = () => {
 
     const updateStatus = async (id: number, newStatus: Order['status']) => {
         try {
-            await axios.patch(`http://127.0.0.1:8000/api/orders/${id}/`, { status: newStatus });
+            await axios.patch(`https://alive-backend.onrender.com/api/orders/${id}/`, { status: newStatus });
             toast.success('Order status updated');
             fetchOrders();
         } catch (error) {
