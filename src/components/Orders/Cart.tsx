@@ -32,7 +32,7 @@ export function CartPage() {
 
         console.log('Submitting order for item:', payload); 
 
-        return axios.post('https://alive-backend.onrender.com/api/orders', payload);
+        return axios.post('https://alive-backend.onrender.com/api/orders/', payload);
       });
 
       const responses = await Promise.all(orderPromises);
