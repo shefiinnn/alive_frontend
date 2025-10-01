@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/token/', { username, password });
+            const response = await axios.post('https://alive-backend.onrender.com/api/token', { username, password });
             const { access } = response.data;
             Cookies.set('access_token', access, { secure: true });
             Cookies.set('isLoggedIn', 'true', { expires: 1 });

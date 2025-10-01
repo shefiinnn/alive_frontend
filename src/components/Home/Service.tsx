@@ -53,8 +53,6 @@ export function ServiceSection() {
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Service</h2>
-
-        {/* Tabs */}
         <div className="flex justify-center border-b border-gray-300 mb-8 overflow-x-auto">
           {services.map((service, index) => (
             <button
@@ -71,7 +69,6 @@ export function ServiceSection() {
           ))}
         </div>
 
-        {/* Embla Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
             <div className="flex">
@@ -103,7 +100,7 @@ export function ServiceSection() {
             <ChevronLeft className="w-6 h-6 text-gray-800" />
           </button>
 
-          {/* Next Button */}
+
           <button
             onClick={scrollNext}
             className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition"

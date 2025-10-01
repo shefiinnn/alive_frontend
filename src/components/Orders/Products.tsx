@@ -26,8 +26,6 @@ export function ProductsPage() {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [searchParams, setSearchParams] = useSearchParams();
-
-  // Get search and category values from URL params
   const searchTerm = searchParams.get('search') || '';
   const selectedCategoryParam = searchParams.get('category');
   const selectedCategory = selectedCategoryParam ? Number(selectedCategoryParam) : '';
@@ -97,8 +95,6 @@ export function ProductsPage() {
     }
     toast.success(`Added to cart`);
   };
-
-  // Update URL search params for search and category change
   const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     const params = new URLSearchParams(searchParams);
